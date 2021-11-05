@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+
+        h1 {
+            text-shadow: 2px 2px;
+            color: rgb(199, 23, 23);
+            font-family: sans-serif;
+            font-size: 50px;
+            font-weight: 600;
+            margin-top: 30px;
+            text-align: center;
+            -webkit-text-fill-color: rgb(240, 36, 36); /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+          }
+
+        h2 {
+            text-shadow: 1px 1px;
+            color: #eee;
+            font-family: sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            text-align: center;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+          }
+          
+        img {
+          width: 350px;
+          height: 300px;
+          object-fit: cover;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        div {
+            height: 625px;
+            background: linear-gradient(to bottom, #3a3939 0%, #669799 78%);
+        }
+
+        a:link, a:visited {
+            background-color: rgb(4, 0, 255);
+            color: rgb(255, 255, 255);
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+          }
+          
+        a:hover, a:active {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            color: rgb(4, 0, 255);
+            font-weight: bold;
+        }
+
+        p.container {
+            text-align: center;
+        }
+
+        mark.kypno {
+            color:black;
+            background: red;
+        }
+
+        mark.kypyes {
+            color:black;
+            background: red;
+        }
+
+        </style>
+</head>
+<body>
+    <div><br><br>
+    <h1>PREDICTION</h1>
+
+    {% if data == 0 %}
+    <h2>You have <mark class="kypno">NOT DONATED THE BLOOD!!</mark></h2>
+    <img src= "static\bloodno.gif">
+
+    {% else %}
+
+    <h2>The patient donated the <mark class="kypyes">BLOOD!!</mark></h2>
+    <img src= "static\blood_yes.gif">
+
+    {% endif %}
+
+    <br><br>
+
+    <p class="container">
+    <a href='/'>GO BACK TO HOMEPAGE</a>
+    </p>
+
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"  href="{{ url_for('static', filename='style.css')}}">
+        </head>
+    <body>
+        
+        <form method="POST", action="{{url_for('home')}}">
+            <center>
+            <div class="form">
+                <div class="title">Blood Donation Analysis</div>
+                <div class="input-container ic1">
+                    <input type="text", name="a", class="input" placeholder=" "/>
+                <div class="cut"></div>
+                <label for="Months since Last Donation" class="placeholder">Months since Last Donation</label>
+                </div>
+                <div class="input-container ic2">
+                    <input type="text", name="b", class="input", placeholder=" "/>
+                <div class="cut"></div>
+                <label for="Number of Donations" class="placeholder">Number of Donations</label>
+                </div>
+                <div class="input-container ic2">
+                    <input type="text", name="c", class="input", placeholder=" "/>
+                <div class="cut cut-short"></div>
+                <label for="Months since First Donation" class="placeholder">Months since First Donation</>
+                </div>
+                <input type="submit", value="predict", class="submit">
+            </div>
+            </center>
+        </form>
+    </body>
+</html>
